@@ -12,23 +12,18 @@ This repository contains the code, datasets, and documentation for the **Pharmac
 ## Repository Structure
 The repository is organized as follows (files to be added):
 
-- **data/**: Datasets for analysis and forecasting.
+- **Dataset/**: Datasets for analysis and forecasting.
   - `SalesDaily.csv`: Daily sales for 8 drug categories (M01AB, M01AE, N02BA, N02BE, N05B, N05C, R03, R06).
-  - `Saleshourly.csv`, `Salesweekly.csv`, `Salesmonthly.csv`: Aggregated sales data.
+  - `Saleshourly.csv`, `Salesweekly.csv`, `Salesmonthly.csv`, `SalesWeeklyScaled.csv`: Aggregated sales data.
+  - `DatasetCreation.ipynb`: Seasonal decomposition, ACF/PCF plots, stationarity tests.
   - `Holiday.csv`: Holiday indicators for exogenous modeling.
-- **notebooks/**: Jupyter notebooks for EDA and modeling.
-  - `eda.ipynb`: Seasonal decomposition, ACF/PCF plots, stationarity tests.
-  - `modeling.ipynb`: LSTM + XGBoost, Prophet, ARIMA, SARIMA, CatBoost implementations.
-- **src/**: Python scripts for modular code.
-  - `preprocess.py`: Data cleaning, feature engineering (lags, rolling stats).
-  - `train_model.py`: Model training and prediction.
-  - `app.py`: Streamlit app for interactive forecasts.
-- **docs/**: Documentation and deliverables.
-  - `progress_report.pdf`: Daily progress (August 20–27, 2025).
-  - `presentation.pptx`: Hackathon PPT slides.
-  - `architecture.png`: System architecture diagram.
-- **requirements.txt**: Python dependencies (to be added).
-- **LICENSE**: MIT License (to be added).
+- **Models/**: Jupyter notebooks for and modeling.
+  - `models`: CatBoost Model, SARIMA Model, Random forest regressor Model, XGBoost Model, ARIMA Model, Auto ARIMA Model, LSTM x XGBoost Hybrid Model, GRU x XGBoost Hybrid Model, Naive forecast Model, Exponential Smoothing Model (Single, Double, Triple), Prophet Model, Dlinear Model, Tbats x prophet Hybrid Model, Light GBM, NBeats+LightGBM Hybrid implementations.
+- **EDA**: Python scripts for Exploratory Data Analysis.
+  - `initial_EDA.ipynb`: Data cleaning, feature engineering (lags, rolling stats).
+  - `Holiday_seasonal_impact.ipynb`: Holiday indicators for exogenous modeling.
+- **Documentation/**: Documentation and deliverables.
+  - `Team Progress Document.pdf`: Daily progress (August 20–27, 2025).
 
 ## Installation
 To set up the project environment (once files are uploaded):
